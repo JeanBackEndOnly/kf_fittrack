@@ -1,0 +1,267 @@
+body{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+.container{
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #161A1D;
+    height: 90vh;
+    width: 600px;
+    border-radius: 20px;
+    border: 2px solid #b2b2b2;
+}
+#p-img{
+    margin: auto;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    width: 400px;
+    top: 2rem;
+    right: 35rem;
+}
+#image_file{
+    display: none;
+}
+#label-img img{
+    width: 200px;
+    height: 200px;
+}
+#label-img{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    top: 4rem;
+    left: 42rem;
+}
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.select-domain{
+    position: fixed;
+    display: flex;
+    margin: auto;
+    top: 17rem;
+}
+.date-input{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 29.5rem;
+    width: 180px;
+    height: 27px;
+    border-radius: 10px;
+    border: #b2b2b2 solid 1px;
+    color: #ffffff;
+    background-color: #161A1D;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 5px 5px 5px 0 #000;
+    transition: 0.5s;
+}
+#workout_day{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 43rem;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: #b2b2b2 solid 1px;
+    color: #ffffff;
+    background-color: #161A1D;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 5px 5px 5px 0 #000;
+    transition: 0.5s;
+}
+#day{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 29.5rem;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: #b2b2b2 solid 1px;
+    color: #ffffff;
+    background-color: #161A1D;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 5px 5px 5px 0 #000;
+    transition: 0.5s;
+}
+#day:hover, #workout_day:hover, .date-input:hover{
+    background-color: #fff;
+    color: #000;
+}
+.exercise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin: auto;
+}
+.p-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999999;
+    color: #fff;
+    transform: translate(-8.5rem);
+    font-weight: 800;
+    font-size: 20px;
+}
+#p-seleted{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 34rem;
+    z-index: 999999;
+    color: #fff;
+    transform: translate(2rem);
+    font-weight: 800;
+    font-size: 20px;
+}
+.exercise-options{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 31rem;
+    bottom: 7rem;
+    width: 270px;
+    height: 240px;
+    border: #b2b2b2 solid 2px;
+    background-color: #161A1D;
+    border-radius: 20px;
+    overflow-y: scroll;
+    color: #fff;
+    
+}
+.exercise-options::-webkit-scrollbar{
+    display: none;
+}
+.exercise-options label{
+    margin: -10px;
+}
+#selected-exercises{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    right: 31rem;
+    bottom: 7rem;
+    width: 270px;
+    height: 240px;
+    border: #b2b2b2 solid 2px;
+    background-color: #161A1D;
+    border-radius: 20px;
+    color: #fff;
+}
+button{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    bottom: 2.5rem;
+    width: 180px;
+    left: 42rem;
+    height: 60px;
+    border-radius: 10px;
+    border: solid#b2b2b2 1px;
+    background-color: #161A1D;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.success-popup{
+    margin: auto;
+    position: fixed;
+}
+.success-popup a{
+    padding: 20px 0;
+    text-decoration: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 300px;
+    height: 110px;
+    background-color: #4BB543;
+    flex-direction: column;
+    font-size: 15px;
+    border: 2px solid #000;
+    font-weight: 800;
+    transition: 0.5s;
+}
+.success-popup:hover a{
+    background-color: #161A1D;
+    color: #fff;
+    border-color: #b2b2b2;
+}
+.error-message{
+    margin: auto;
+    position: fixed;
+    left: 38rem;
+}
+.error-message p{
+    padding: 20px 0;
+    text-decoration: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 620px;
+    height: 70px;
+    background-color: #161A1D;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: bold;
+}
+.column img{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+#back-Button{
+    position: fixed;
+    display: flex;
+    top: 3rem;
+    left: 30rem;
+}
+#back-Button:hover img{
+    transform: scale(1.1);
+}

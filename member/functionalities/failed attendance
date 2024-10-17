@@ -1,0 +1,125 @@
+<?php
+
+require_once '../../include/config.php';
+require_once '../../include/session.php';
+
+ $members_id = isset($_GET["members_id"]) ? $_GET["members_id"] : "Walang Id na nakuha Idol";
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $Mtime_out = $_POST["Mtime_out"];
+    $Ntime_out = $_POST["Ntime_out"];
+    $Etime_out = $_POST["Etime_out"];
+
+    if($current_time > date('08:00:00') && $current_time < date('11:59:59')){
+
+        try{
+        
+            $errors = [];
+
+            if($Ntime_out > date('01:00:00') && $Ntime_out < date('05:59:59')){
+            $errors["afterNoon"] = "IT'S CURRENTLY " . $Mtime_out . " IN THE MORNING YOU CAN'T TIME IN AT AFTERNOON!";
+            }
+            else if($Etime_out > date('06:00:00') && $Etime_out < date('10:59:59')){
+                $errors["eveNing"] = "IT'S CURRENTLY " . $Mtime_out . " IN THE MORNING YOU CAN'T TIME IN AT EVENING!";
+            }
+
+            if($errors){
+                $_SESSION["time_errors"] = $errors;
+                header("Location: ../attendance/attendance.php");
+                die();
+            }else{
+            
+            $query = "INSERT INTO attendance (Mtime_out, members_id) VALUES (:current_time, :members_id)";
+            $stmt = $pdo->prepare($query);
+            $stmt->bindParam(":current_time", $current_time);
+            $stmt->bindParam(":members_id", $members_id);
+            $stmt->execute();
+
+            header("Location: ../attendance/attendance.php?succes=attendance");
+            $stmt = null;
+            $pdo = null;
+            die();
+            }
+        
+        }catch(PDOException $e){
+            die("query failed: " . $e->getMessage());
+        }
+        
+    }else if($current_time > date('01:00:00') && $current_time < date('05:59:59')){
+         
+        try{
+        
+            $errors = [];
+
+            if($Ntime_out > date('08:00:00') && $Ntime_out < date('11:59:59')){
+            $errors["afterNoon"] = "IT'S CURRENTLY " . $Ntime_out . " IN THE MORNING YOU CAN'T TIME IN AT MORNING!";
+            }
+            else if($Ntime_out > date('06:00:00') && $Ntime_out < date('10:59:59')){
+                $errors["eveNing"] = "IT'S CURRENTLY " . $Ntime_out . " IN THE MORNING YOU CAN'T TIME IN AT EVENING!";
+            }
+
+            if($errors){
+                $_SESSION["time_errors"] = $errors;
+                header("Location: ../attendance/attendance.php");
+                die();
+            }else{
+            
+            $query = "INSERT INTO attendance (Ntime_out, members_id) VALUES (:current_time, :members_id)";
+            $stmt = $pdo->prepare($query);
+            $stmt->bindParam(":current_time", $current_time);
+            $stmt->bindParam(":members_id", $members_id);
+            $stmt->execute();
+
+            header("Location: ../attendance/attendance.php?succes=attendance");
+            $stmt = null;
+            $pdo = null;
+            die();
+            }
+        
+        }catch(PDOException $e){
+            die("query failed: " . $e->getMessage());
+        }
+        
+    }else if($current_time > date('06:00:00') && $current_time < date('10:59:59')){
+        
+        try{
+        
+            $errors = [];
+
+            if($Etime_out > date('01:00:00') && $Etime_out < date('05:59:59')){
+            $errors["afterNoon"] = "IT'S CURRENTLY " . $Etime_out . " IN THE MORNING YOU CAN'T TIME IN AT AFTERNOON!";
+            }
+            else if($Etime_out > date('08:00:00') && $Etime_out < date('11:59:59')){
+                $errors["eveNing"] = "IT'S CURRENTLY " . $Etime_out . " IN THE MORNING YOU CAN'T TIME IN AT MORNING!";
+            }
+
+            if($errors){
+                $_SESSION["time_errors"] = $errors;
+                header("Location: attendance.php");
+                die();
+            }else{
+            
+            $query = "INSERT INTO attendance (Etime_out, members_id) VALUES (:current_time, :members_id)";
+            $stmt = $pdo->prepare($query);
+            $stmt->bindParam(":current_time", $current_time);
+            $stmt->bindParam(":members_id", $members_id);
+            $stmt->execute();
+
+            header("Location: ../attendance/attendance.php?succes=attendance");
+            $stmt = null;
+            $pdo = null;
+            die();
+            }
+        
+        }catch(PDOException $e){
+            die("query failed: " . $e->getMessage());
+        }
+        
+    }else{
+        echo "<br>maduya<br>";
+    }
+
+}else{
+    header("Location: ../attendance/../attendance/attendance.php");
+    die();
+}

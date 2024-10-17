@@ -1,0 +1,128 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0a0a0a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.inner-container {
+    width: 400px;
+    height: 350px; 
+    background-color: #161A1D;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 20px;
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;  
+    align-items: center; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: #B2B2B2;
+    transition: 0.5s;
+}
+.inner-container:hover{
+    border-color: #ff0000;
+}
+img{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: -10px;
+}
+.inner-container form{
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;  
+    align-items: center; 
+    margin: auto;
+}
+.inner-container input{
+    margin: 5px 0;
+    width: 200px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #B2B2B2;
+    background-color: #161A1D;
+    color: #fff;
+}
+.inner-container input::placeholder{
+    color: #fff;
+}
+input:hover{
+    border-color: #ff0000;
+    color: #fff;
+}
+.row-username img{
+    width: 30px;
+    height: 30px;
+    transform: translate(-5px, -9px);
+}
+.row-username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+}
+.row-password img{
+    width: 30px;
+    height: 30px;
+    transform: translate(-5px, -9px);
+}
+.row-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+}
+.password-toggle-icon img {
+    width: 15px; 
+    height: 15px; 
+    cursor: pointer;
+    position: fixed;
+    transform: translate(-2rem, -13px);
+    transition: 1s;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #101111;
+    color: #fff;
+    border-color: #B2B2B2;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: #d3d3d3;
+    color: #000;
+    border-color: #000;
+}
+.error{
+    position: absolute;
+    display: flex;
+    bottom: -5rem;
+}
+.error p{
+    background-color: #000;
+    border-color: #8d8d8d;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    color: #ff0000;
+    font-size: 15px;
+    padding: 10px;
+}

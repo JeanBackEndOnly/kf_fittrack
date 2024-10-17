@@ -1,0 +1,192 @@
+body{
+    margin: auto;
+    background-color: #000;
+    font-family: system-ui;
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    overflow: hidden;
+}
+.container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 90vh;
+    background: url("../../image/bg-info.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: solid #b2b2b2 2px;
+}
+label{
+    position: fixed;
+    margin: auto;
+    top: 4rem;
+    left: 43%;
+    width: 50px;
+    z-index: 1000;
+}
+label img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.pfp{
+    position: fixed;
+    margin: auto;
+    top: 8rem;
+    left: 44%;
+    width: 50px;
+}
+.pfp img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.information{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: auto;
+}
+.form-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transform: translateY(3rem);
+}
+.column-one, .column-two{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+.column-one input, .column-two input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: solid #b2b2b2 1px;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: system-ui;
+    font-size: 15px;
+    font-weight: 800;
+    box-shadow: 5px 5px 5px 0 #000000;
+    margin: 20px 10px;
+}
+input:hover, input:hover, .column-two select:hover{
+    background-color:rgba(255, 255, 255, 0.6);
+    color: #000;
+}
+.column-two select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: solid #b2b2b2 1px;
+    color: #fff;
+    padding: 5px 5px;
+    font-family: system-ui;
+    font-size: 15px;
+    font-weight: 800;
+    box-shadow: 5px 5px 5px 0 #000000;
+    margin: 20px 10px;
+}
+.column-one input::placeholder, .column-two input::placeholder{
+    color: #fff;
+}
+.back-button{
+    position: fixed;
+    margin: auto;
+    top: 4rem;
+    left: 30rem;
+}
+.back-button img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.back-button:hover img{
+    transform: scale(1.1);
+}
+#edit-img{
+    width: 20px;
+    height: 20px;
+}
+.information button{
+    position: fixed;
+    margin: auto;
+    bottom: 8rem;
+    left: 44.5%;
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #000;
+    font-family: system-ui;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.5s;
+    border: solid #b2b2b2 1px;
+    font-size: 16px;
+}
+button:hover{
+background-color: #3a4852;
+}
+.errors_edit{
+    position: fixed;
+    display: flex;
+    margin: auto;
+    bottom: 4.5rem;
+    color: #ff000f;
+    font-family: system-ui;
+    font-size: 20px;
+    font-weight: 800;
+}
+.center-popup{
+    position: fixed;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #008a09;
+    color: #fff;
+}
+.center-popup a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    text-decoration: none;
+    font-family: system-ui;
+    font-size: 15px;
+    font-weight: 800;
+    width: 300px;
+    height: 100px;
+    color: #000;
+    padding-bottom: 20px;
+    border: solid #b2b2b2 2px;
+    transition: 0.5s;
+}
+.center-popup p{
+    font-size: 20px;
+    color: #000;
+    transition: 0.5s;
+}
+.center-popup:hover a{
+    background-color: #161A1D;
+    color: #fff;
+}   
+.center-popup:hover p{
+    color: #fff;
+}

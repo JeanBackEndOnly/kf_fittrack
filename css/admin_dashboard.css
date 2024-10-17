@@ -1,0 +1,487 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0a0a0a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.inner-container {
+    background-color: #101111;
+    text-align: center;
+    padding: 0;
+    font-size: 30px;
+    border-radius: 20px;
+    display: flex;  
+    justify-content: center;    
+    align-items: center; 
+}
+.side-nav{
+    width: 75px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background-color: #161A1D;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right-style: solid;
+    border-right-color: #8d8d8d;
+    border-right-width: 1px;
+    z-index: 9999;
+}
+.user img{
+    width: 90px;
+    height: 90px;
+}
+.user{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 100px;
+    height: 90px;
+}
+.navs-div img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    margin: 0;
+}
+.navs-div ul li img{
+    margin: 0;
+    width: 30px;
+    transition: 0.5s;
+}
+
+.navs-div ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+    width: 100px;
+    height: 70px;
+    transition: 0.5s;
+    margin: 20px 0;
+}   
+ul{
+    list-style-type: none;
+}
+.nav-ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 0;
+    left: 0;
+    right: 0;
+    bottom: 5rem;
+    width: 60px;
+    height: 70vh;
+}
+#a-nav{
+    position: relative;
+    margin: 12px 0;
+    text-decoration: none;
+    color: #fff;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    transform: translate(-1.2rem);
+} 
+ul li p{
+    margin: 0;
+}
+#dashboard-li{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* background-color: #ad0000; */
+    height: 70px;
+    width: 98px;
+    color: #fff;
+    border-radius: 10px;
+    border: #ffffff 1px solid;
+}
+#logout-li:hover{
+    background-color: #ad0000;
+    border: #ffffff 1px solid;
+}
+.navs-div li:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ad0000;
+    color: #fff;
+    border-radius: 10px;
+    border: #ffffff 1px solid;
+}
+#logout-li{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 80px;
+    right: 0;
+    bottom: 6rem;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#logout-li img{
+    width: 30px;
+}
+a:hover{
+    color: #BE3144;
+}
+.navs-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.navs-div li{
+    margin-top: 100px;
+}
+
+/* ----------------------------------- END OF DASHBOARD NAVS ----------------------------------- */
+
+.row{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 4rem;
+    left: 20rem;
+}
+.contract-renewed{
+    background-color: #101111;
+    width: 200px;
+    height: 150px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #8d8d8d;
+    border-radius: 20px;
+    color: #fff;
+}
+.contract-title-one, .contract-title-two{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.contract-title-two{
+    margin-top: -15px;
+}
+.contract-count{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 30px;
+    margin-top: -5px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.contract-expired{
+    background-color: #101111;
+    width: 200px;
+    height: 150px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #8d8d8d;
+    border-radius: 20px;
+    color: #fff;
+}
+.active-members{
+    background-color: #101111;
+    width: 200px;
+    height: 150px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #8d8d8d;
+    border-radius: 20px;
+    margin-left: 10px;
+    color: #fff;
+}
+.gym-members{
+    background-color: #101111;
+    width: 200px;
+    height: 150px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #8d8d8d;
+    border-radius: 20px;
+    margin: 0 1rem;
+    color: #fff;
+}
+.contract-renewed:hover, 
+.contract-expired:hover, 
+.gym-members:hover, 
+.active-members:hover{
+    background-color: #ad0000;
+    font-weight: 900;
+}
+
+/* -------------------------------- MEMBER BOX INFORMATION --------------------------- */
+
+.p-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: fixed;
+    z-index: 9999;
+    color: #fff;
+    top: 15rem;
+    font-size: 40px;
+    font-weight: 700;
+    left: 30rem;
+}
+.expired-contract{
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    height: 50vh;
+    right: 1rem;
+    left: 150px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.expired-contract::-webkit-scrollbar{
+    display: none;
+}
+.expired-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 260px;
+    height: 250px;
+    background-color: #161A1D;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    border-color: #8d8d8d;
+    color: #fff;
+    margin: 30px 10px;
+    padding: 0;
+}
+.expired-ul li{
+    margin: 0 10px;
+}
+.expired-ul li img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.id-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0;
+    width: 260px;
+    height: 60px;
+}
+.id-div li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.row-contract{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-direction: row;
+    width: 260px;
+}
+.row-contract li{
+    font-size: 13px;
+}
+#expiration-li, #renewal-li{
+    margin-top: 2px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.contract-div, .expiration-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 2.5px;
+    height: 50px;
+    background-color: #cf1414;
+} 
+.change-password img{
+    width: 20px;
+}
+.change-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.change-password a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    width: 200px;
+    height: 30px;
+    background-color: #101111;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c2c2c2;
+    padding: 2px;
+    transition: 0.5s;
+}
+.change-password:hover a{
+    background-color: #ff0000;
+}
+
+/* ------------------- CURRENT PASSWORD CONFIRMATION ------------------- */
+
+.inner-container{
+    width: 400px;
+    height: 350px; 
+    background-color: #101111;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 20px;
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;  
+    align-items: center; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: #8d8d8d;
+}
+.inner-container a{
+    position: absolute;
+    transform: translate(-10rem, -9rem);
+}
+a img{
+    width: 50px;
+    transition: 0.5s;
+}
+/* a:hover img{
+    transform: scale(1.1);
+} */
+.logo{
+    width: 150px;
+    position: relative;
+}
+.inner-container form{
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;  
+    align-items: center; 
+}
+.inner-container input{
+    margin: 5px 0;
+    width: 200px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f00000;
+    background-color: #101111;
+    color: #fff;
+}
+.inner-container button{
+    width: 120px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #101111;
+    color: #fff;
+    border-color: #8d8d8d;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: #d3d3d3;
+    color: #000;
+    border-color: #000;
+}
+.popup{
+    position: absolute;
+    transform: translate(1rem, -2rem);
+    color: #cf1414;
+    font-size: 20px;
+}
+
+.popup a{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    font-size: 20px;
+    width: 350px;
+    height: 100px;
+    background-color: #101111;
+    border-color: #8d8d8d;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    padding-top: 10px;
+    transform: translate(-5rem, -6rem);
+}
+
+/* ------------------- REST PASSWORD ------------------- */
+
+.popupPassword{
+    position: absolute;
+    transform: translateY(10rem);
+    color: #cf1414;
+    font-size: 20px;
+}
+
+.popupPassword a{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    font-size: 20px;
+    width: 350px;
+    height: 100px;
+    background-color: #101111;
+    border-color: #8d8d8d;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    padding-top: 10px;
+    transform: translate(-11rem, -11rem);
+}

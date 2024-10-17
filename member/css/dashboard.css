@@ -1,0 +1,363 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0a0a0a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.inner-container {
+    background-color: #101111;
+    text-align: center;
+    padding: 0;
+    font-size: 30px;
+    border-radius: 20px;
+    display: flex;  
+    justify-content: center;    
+    align-items: center; 
+}
+.side-nav{
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background-color: #161A1D;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-color: #6d6d6d;
+    transition: width 0.5s;
+    z-index: 9999;
+}
+.user img{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+.user{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 100px;
+    height: 90px;
+}
+#username{
+    color: #fff;
+    margin: 0;
+    transform: translateY(-1rem);
+}
+.navs-div img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+}
+#plans-li{
+    margin-top: 50px;
+}
+#dashboard-li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px #fff solid;
+    border-radius: 10px;
+    width: 90px;
+    height: 60px;
+}
+#plans-li,
+#progress-li,
+#attendance-li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 60px;
+}
+#progress-li{
+    margin-top: 0;
+}
+#attendance-li{
+    margin-top: -50px;
+}
+.navs-div li:hover{
+    background-color: #ad0000;
+    color: #fff;
+    border: #ffffff 1px solid;
+}
+ul li img{
+    margin: 0;
+    width: 40px;
+    transition: 0.5s;
+}
+ul li{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    font-size: 12px;
+    width: 90px;
+    height: 60px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.navs-div ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 0;
+    left: 1;
+    right: 0;
+    width: 100px;
+    height: 80vh;
+}
+ul li p{
+    margin: 0;
+}
+#logout-li{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90px;
+    height: 60px;
+    right: 5px;
+    bottom: 6rem;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#logout-li img{
+    width: 30px;
+}
+.navs-div a{
+    margin: 25px;
+    text-decoration: none;
+    color: #fff;
+    z-index: 99;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+} 
+.navs-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.navs-div li{
+    margin-top: 100px;
+}
+
+/* --------------------------------- DASHBOARD INFOTMATIONS ---------------------------------- */
+.dashboard-informations h2{
+    position: fixed;
+    top: 35%;
+    left: 10%;
+}
+.dashboard-informations{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    top: 4rem;
+    left: 20%;
+    right: 1%;
+    color: #fff;
+    overflow: hidden;
+}
+.date{
+    width: 250px;
+    height: 110px;
+    background-color: #161A1D;
+    border-radius: 20px;
+    border: 1px #B2B2B2 solid;
+    transition: 0.5s;
+    padding: 20px;
+}
+.date h1{
+    margin-left: 10px;
+    margin-top: 0;
+}
+.date p{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin: 20px;
+    font-size: 20px;
+}
+.date:hover{
+    background-color: #BE3144;
+}
+.workout-day{
+    width: 250px;
+    height: 110px;
+    background-color: #161A1D;
+    border-radius: 20px;
+    border: 1px #B2B2B2 solid;
+    transition: 0.5s;
+    margin: 0 30px;
+    padding: 20px;
+}
+.workout-day h1{
+    font-size: 22px;
+    margin: 10px;
+}
+.workout-day p{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.workout-day:hover{
+    background-color: #BE3144;
+}
+.contract-expiration{
+    width: 250px;
+    height: 110px;
+    background-color: #161A1D;
+    border-radius: 20px;
+    border: 1px #B2B2B2 solid;
+    transition: 0.5s;
+    padding: 20px;
+}
+.contract-h1{
+    font-size: 20px;
+    font-weight: 900;
+}
+.contract-p{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 24px;
+}
+#no-contract{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(1.5rem);
+}
+.contract-expiration:hover{
+    background-color: #BE3144;
+}
+.workout-img img{
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-width: 20px;
+    border-right-style: solid;
+    border-right-color: #b2b2b2;
+    z-index: 20;
+}
+.workout-img{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    margin: 0;
+    height: 54vh;
+    width: 90vw;
+    position: fixed;
+    top: 45%;
+    left: 150px;
+    border-radius: 50px;
+}
+.workout-img::-webkit-scrollbar{
+    display: none;
+}
+.workout-img ul{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 0;
+    width: 500px;
+    height: 200px;
+    border: solid 2px #b2b2b2;
+    background-color: #161A1D;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s
+}
+.text-class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    height: 200px;
+    width: 170px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+    transform: translate(290px);
+}
+.work-day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 251px;
+    background-color: #b60f0f;
+    height: 200px;
+    border-bottom-style: solid;
+    border-bottom-color: #b2b2b2;
+    border-top-right-radius: 20px;
+}
+.work-day p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    width: 251px;
+    font-weight: 900;
+}
+.day-date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 251px;
+    padding: 0 10px;
+}
+#day-id{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 20px;
+    width: 200px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+#date-id{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 18px;
+    width: 200px;
+}
+.workout-img ul:hover{
+    box-shadow: 5px 10px 5px 0 #b2b2b2;
+}
